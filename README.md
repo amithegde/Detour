@@ -2,15 +2,19 @@
 
 + Uses Microsoft Detours to hook into functions
 + `Detour.exe` injects a dll `DetouredApis.dll` into target process which hooks APIs
-+ Emits some logs using debug log which can be viewed using Sysinternals DebugView
-+ Most logs will be written to a file: `C:\Windows\Temp\Detour_Output.txt`
-+ uses https://learn.microsoft.com/en-us/vcpkg/get_started/get-started-msbuild?pivots=shell-cmd to link detours library, setting up vcpkg is necessary to build the project
++ Logs are emitted using `OutputDebugString` and can be viewed using [Sysinternals DebugView](https://learn.microsoft.com/en-us/sysinternals/downloads/debugview)
+
+## Setup
+
++ clone the repo
++ setup vcpkg as described [here](https://learn.microsoft.com/en-us/vcpkg/get_started/get-started-msbuild?pivots=shell-cmd)
++ open the solution on VS 22, and hit `Ctrl+Shift+B` to build
 
 ## Usage
 
 + `Detour.exe <targetprocess.exe> detouredapis.dll`
 + e.g.: `Detour.exe" PerfCounterCpp.exe DetouredApis.dll`
-+ it expects the dll to be in the same directory as Detour.exe
++ it expects the dll `detouredapis.dll` to be in the same directory as `Detour.exe`
 + If there are more instances of target exe, only one will be picked
 
 ## Troubleshooting
