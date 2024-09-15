@@ -1,6 +1,6 @@
 # Detour
 
-+ Uses Microsoft Detours to hook into functions
++ Uses [Microsoft Detours](https://github.com/microsoft/Detours) to intercept functions
 + `Detour.exe` injects a dll `DetouredApis.dll` into target process which hooks APIs
 + Logs are emitted using `OutputDebugString` and can be viewed using [Sysinternals DebugView](https://learn.microsoft.com/en-us/sysinternals/downloads/debugview)
 
