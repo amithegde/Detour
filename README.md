@@ -16,7 +16,3 @@
 + e.g.: `Detour.exe" PerfCounterCpp.exe DetouredApis.dll`
 + it expects the dll `detouredapis.dll` to be in the same directory as `Detour.exe`
 + If there are more instances of target exe, only one will be picked
-
-## Troubleshooting
-
-+ If dll is injected to a process executing with low privileges, it may fail to write logs to c:\windows\temp directory. Need to ensure that either log directory has access or use debug output.
